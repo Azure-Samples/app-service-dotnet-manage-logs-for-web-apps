@@ -58,6 +58,11 @@ namespace Microsoft.Azure.Management.Samples.Common
         public static Func<string> PauseMethod { get; set; }
 
         public static string ProjectPath { get; set; }
+        private static Random _random => new Random();
+
+        public static string ReadLine() => PauseMethod.Invoke();
+        public static string CreateRandomName(string namePrefix) => $"{namePrefix}{_random.Next(9999)}";
+        public static string CreatePassword() => "azure12345QWE!";
 
         static Utilities()
         {
