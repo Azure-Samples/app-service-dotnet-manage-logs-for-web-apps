@@ -49,7 +49,7 @@ namespace ManageWebAppLogs
                 var webSiteCollection = resourceGroup.GetWebSites();
                 var webSiteData = new WebSiteData(region)
                 {
-                    SiteConfig = new Azure.ResourceManager.AppService.Models.SiteConfigProperties()
+                    SiteConfig = new SiteConfigProperties()
                     {
                         WindowsFxVersion = "PricingTier.StandardS1",
                         NetFrameworkVersion = "NetFrameworkVersion.V4_6",
